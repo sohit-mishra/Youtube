@@ -1,0 +1,61 @@
+#Watch {
+    width: calc(100% - 200px);
+    margin-top: 64px;
+    height: 100vh;
+    display: flex;
+    padding: 0 100px;
+}
+
+#Watch .left {
+    width: calc(100% - 350px);
+}
+
+#Watch .left .player {
+    margin-top: 30px;
+}
+
+#Watch .right {
+    width: 350px;
+}
+
+#Watch h2 {
+    font-size: 22px;
+    margin: 10px 0;
+
+}
+
+#Watch p {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #5c5c5c;
+}
+
+#Watch p span {
+    font-weight: 550;
+}
+
+
+@media screen and (max-width: 1300px) {
+    #Watch {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    #Watch {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #Watch .left {
+        width: 100%;
+    }
+    #Watch .right {
+        width: 100%;
+    }
+
+    #Watch .left .player {
+       height: 10px;
+    }
+}

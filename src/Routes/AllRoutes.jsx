@@ -1,14 +1,25 @@
-import { Routes ,Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from '../Component/Home';
-import Watch from '../Component/Watch';
+import Navbar from '../Routes/Navbar';
+import Login from "../Component/Login";
+import SlideBar from '../Routes/SlideBar';
+import Watch from "../Component/Watch";
+
 
 export default function AllRoutes() {
   return (
     <>
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/watch" element={<Watch/>}/>
+        <Route index element={ 
+          <div style={{display:"flex"}}>
+            <SlideBar />
+            <Home />
+          </div>
+        }/>
+        <Route path="/v/:videoID" element={<Watch />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </>
-  )
+  );
 }

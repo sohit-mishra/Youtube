@@ -4,17 +4,21 @@ import Video from '../assets/Video.svg';
 import Bell from '../assets/Bell.svg';
 import Mic from '../assets/mic.svg';
 import { BsSearch } from "react-icons/bs";
-import { FaMicrophone } from "react-icons/fa";
-
 import { HiDotsVertical } from "react-icons/hi";
 import { FaRegUserCircle } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContent } from "../AuthContext/AuthProvider";
 import '../Routes/NavbarModule.css';
+import { useNavigate } from "react-router-dom";
+
 
 export default function Navbar() {
+  const navigate = useNavigate();
   const { AuthTheme } = useContext(AuthContent);
 
+  const handleClick = () => {
+    navigate(`/login`);
+  };
   return (
     <header>
       <div className="left">
@@ -33,12 +37,12 @@ export default function Navbar() {
           <>
             <img src={Video} alt="" />
             <img src={Bell} alt="" />
-            <img src="https://yt3.ggpht.com/_VHd3K67L2nakO1IznyEZ0ojLR7Gzte_1o3j1XMMUEXouHjOuULYWVEGuJFBKi9Yuy5hXnNvnQ=s88-c-k-c0x00ffffff-no-rj" alt="profile" />
+            <img src="https://images.unsplash.com/photo-1559629819-638a8f0a4303" alt="profile" />
           </>
         ) : (
           <>
             <HiDotsVertical />
-            <button>
+            <button onClick={handleClick}>
               <FaRegUserCircle />
               Sign in
             </button>

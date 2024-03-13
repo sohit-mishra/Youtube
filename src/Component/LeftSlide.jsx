@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import Card from "./Card";
-import '../Component/HomeModule.css';
+import '../Component/LeftSideModule.css';
 
 export default function Home() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
-  var ApiKey = "AIzaSyDEmK6CwDqKbFchN3AZrIjYaM65yH7lqMk";
+  var ApiKey = "AIzaSyB_8I7DWJBvJtor3h-4CPm0W2U48mdaCm0";
   var url = `https://www.googleapis.com/youtube/v3/search?key=${ApiKey}&part=snippet,id&order=date&maxResults=300`;
 
   const fetchData = async () => {
@@ -37,20 +37,11 @@ export default function Home() {
   }
 
   return (
-    <div id="Home">
+    <div id="Home" style={{width:"100%" , marginTop:"20px"}}>
       <ul>
         <li>All</li>
         <li>Music</li>
-        <li>Mobile Phones</li>
         <li>News</li>
-        <li>Masala films</li>
-        <li>Dance-Pop</li>
-        <li>Products</li>
-        <li>Graphic design</li>
-        <li>Civil Services Exams</li>
-        <li>Computer Science</li>
-        <li>Debates</li>
-        <li>Recently uploaded</li>
         <li>Watched</li>
       </ul>
       <div className="grid">

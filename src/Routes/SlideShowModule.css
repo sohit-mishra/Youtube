@@ -1,7 +1,7 @@
 .SlideShow {
-    width: 220px;
     margin-top: 64px;
     overflow-y: auto;
+    width: 240px;
 }
 
 .SlideShow::-webkit-scrollbar {
@@ -21,16 +21,6 @@
   .SlideShow::-webkit-scrollbar-thumb:hover {
     background: rgb(239, 239, 239); 
   }
-
-
-
-
-
-
-
-
-
-
 
 hr{
     width: calc(100% - 30px);
@@ -72,4 +62,14 @@ hr{
 .SlideShow p a {
     color: #5e5e5e;
     font-weight: bold;
+}
+
+
+@media screen and (max-width: 1300px) {
+    .SlideShow {
+        margin-top: 64px;
+        overflow-y: auto;
+        width: 0;
+    }
+    
 }
