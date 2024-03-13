@@ -7,7 +7,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
-  var ApiKey = "AIzaSyDEmK6CwDqKbFchN3AZrIjYaM65yH7lqMk";
+  var ApiKey = "AIzaSyB_8I7DWJBvJtor3h-4CPm0W2U48mdaCm0";
   var url = `https://www.googleapis.com/youtube/v3/search?key=${ApiKey}&part=snippet,id&order=date&maxResults=300`;
 
   const fetchData = async () => {

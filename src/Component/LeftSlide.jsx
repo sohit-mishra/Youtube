@@ -37,7 +37,7 @@ export default function Home() {
   }
 
   return (
-    <div id="Home" style={{width:"100%" , marginTop:"20px"}}>
+    <div id="LeftSide" style={{width:"100%" , marginTop:"20px"}}>
       <ul>
         <li>All</li>
         <li>Music</li>
